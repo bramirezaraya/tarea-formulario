@@ -1,7 +1,6 @@
 "use strict";
 var expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-    // password: /^.{4,12}$/, // 4 a 12 digitos.
     mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     celular: /^\d{9,9}$/,
     rut: /^[K0-9\s]{1,40}$/,
@@ -61,13 +60,8 @@ var validarFormulario = function (e) {
 };
 inputs.forEach(function (input) {
     input.addEventListener('keyup', validarFormulario);
-    // input.addEventListener('blur', validarFormulario);
 });
 var formulario = document.getElementById("formulario");
-// formulario.addEventListener("submit", function(event:any){
-//   let nombre:any = document.getElementById("nombre")
-//   event.preventDefault();
-// })
 formulario.addEventListener('submit', function (e) {
     var _a;
     e.preventDefault();
