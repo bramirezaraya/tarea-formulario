@@ -21,31 +21,43 @@ const validarFormulario = (e:any) => {
 		case "nombre":
 		
       if(expresiones.nombre.test(e.target.value)){
-        document.querySelector('#grupo__nombre p')?.classList.add('formulario__input-error');
+        document.querySelector('#grupo__nombre .formulario__input-error')?.classList.remove('formulario__input-error-activo');
+        document.querySelector('#grupo__nombre ')?.classList.remove('formulario__grupo-incorrecto');
+        document.querySelector('#grupo__nombre ')?.classList.add('formulario__grupo-correcto');
         campos['nombre'] = true;
         
       }else{
-        document.querySelector('#grupo__nombre p')?.classList.remove('formulario__input-error');
+        document.querySelector('#grupo__nombre .formulario__input-error')?.classList.add('formulario__input-error-activo');
+        document.querySelector('#grupo__nombre ')?.classList.add('formulario__grupo-incorrecto');
+        document.querySelector('#grupo__nombre ')?.classList.remove('formulario__grupo-correcto');
         campos['nombre'] = false;
       }
     break;
     case "rut":
        
       if(expresiones.rut.test(e.target.value)){
-        document.querySelector('#grupo__rut p')?.classList.add('formulario__input-error');
+        document.querySelector('#grupo__rut .formulario__input-error')?.classList.remove('formulario__input-error-activo');
+        document.querySelector('#grupo__rut ')?.classList.remove('formulario__grupo-incorrecto');
+        document.querySelector('#grupo__rut ')?.classList.add('formulario__grupo-correcto');
         campos['rut'] = true;
       }else{
-        document.querySelector('#grupo__rut p')?.classList.remove('formulario__input-error');
+        document.querySelector('#grupo__rut .formulario__input-error')?.classList.add('formulario__input-error-activo');
+        document.querySelector('#grupo__rut ')?.classList.add('formulario__grupo-incorrecto');
+        document.querySelector('#grupo__rut ')?.classList.remove('formulario__grupo-correcto');
         campos['rut'] = false;
       }
   
     break;
 		case "mail":
       if(expresiones.mail.test(e.target.value)){
-        document.querySelector('#grupo__mail p')?.classList.add('formulario__input-error');
+        document.querySelector('#grupo__mail .formulario__input-error')?.classList.remove('formulario__input-error-activo');
+        document.querySelector('#grupo__mail ')?.classList.remove('formulario__grupo-incorrecto');
+        document.querySelector('#grupo__mail ')?.classList.add('formulario__grupo-correcto');
         campos['mail'] = true;
       }else{
-        document.querySelector('#grupo__mail p')?.classList.remove('formulario__input-error');
+        document.querySelector('#grupo__mail .formulario__input-error')?.classList.add('formulario__input-error-activo');
+        document.querySelector('#grupo__mail ')?.classList.add('formulario__grupo-incorrecto');
+        document.querySelector('#grupo__mail ')?.classList.remove('formulario__grupo-correcto');
         campos['mail'] = false;
       }
 
@@ -53,10 +65,14 @@ const validarFormulario = (e:any) => {
 		case "celular":
 		
       if(expresiones.celular.test(e.target.value)){
-        document.querySelector('#grupo__celular p')?.classList.add('formulario__input-error');
+        document.querySelector('#grupo__celular .formulario__input-error')?.classList.remove('formulario__input-error-activo');
+        document.querySelector('#grupo__celular ')?.classList.remove('formulario__grupo-incorrecto');
+        document.querySelector('#grupo__celular ')?.classList.add('formulario__grupo-correcto');
         campos['celular'] = true;
       }else{
-        document.querySelector('#grupo__celular p')?.classList.remove('formulario__input-error');
+        document.querySelector('#grupo__celular .formulario__input-error')?.classList.add('formulario__input-error-activo');
+        document.querySelector('#grupo__celular ')?.classList.add('formulario__grupo-incorrecto');
+        document.querySelector('#grupo__celular ')?.classList.remove('formulario__grupo-correcto');
         campos['celular'] = false;
       }
 
