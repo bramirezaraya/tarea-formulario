@@ -4,6 +4,7 @@ var expresiones = {
     mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     celular: /^\d{9,9}$/,
     rut: /^[K0-9\s]{1,40}$/,
+    opinion: /^[a-zA-ZÀ-ÿ\s]{1,500}$/,
 };
 var campos = {
     nombre: false,
@@ -11,6 +12,7 @@ var campos = {
     rut: false,
     mail: false,
     checkedLista: false,
+    opinion: false,
 };
 var inputs = document.querySelectorAll('#formulario input');
 var validarFormulario = function (e) {

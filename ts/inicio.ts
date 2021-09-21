@@ -4,6 +4,7 @@ const expresiones = {
 	mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	celular: /^\d{9,9}$/,// 9 numeros.
   rut: /^[K0-9\s]{1,40}$/,
+  opinion: /^[a-zA-ZÀ-ÿ\s]{1,500}$/,
 }
 
 const campos = {
@@ -12,6 +13,7 @@ const campos = {
     rut:false,
     mail:false,
     checkedLista: false,
+    opinion:false,
 }
 
 const inputs = document.querySelectorAll('#formulario input');
@@ -81,8 +83,6 @@ const validarFormulario = (e:any) => {
 }
 
 
-
-
 inputs.forEach((input) => {
 	input.addEventListener('keyup', validarFormulario);
 });
@@ -107,7 +107,8 @@ formulario.addEventListener('submit', (e:any) => {
 
   if( parrafo.value !=null || checked2 >=1){ // en caso de que checked2 este verificado y este uno marcado o el parrafo de agregar algun ramo en especifico sea distinto de null, entonces cumple con la restriccion
     campos.checkedLista = true;
-  }
+  } 
+ 
 
   if(campos.nombre && campos.rut && campos.mail && campos.celular && (checked.length >= 1) && campos.checkedLista && (checkRadio2.length == 1)){
 		formulario.reset();

@@ -9,8 +9,7 @@ body{
 .container{
     height: auto;
     width: 1000px;
-    margin-top: 150px;
-    margin-left: 300px;
+    margin: 150px auto;
     border: 2px solid rgb(212, 209, 209);
     border-radius: 10px;
     background-color: rgb(243, 239, 239);
@@ -73,11 +72,11 @@ p{
 }
 
 .formulario__grupo-incorrecto .formulario_input {
-	border: 3px solid #bb2929;
+	border: 1.5px solid #df2222;
 }
 
 .formulario__grupo-correcto .formulario_input{
-    border: 3px solid #0efa06;
+    border: 1.5px solid #0efa06;
 }
 
 .formulario__mensaje {
